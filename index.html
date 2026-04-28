@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>偏食タイプ診断｜うちの子、どのタイプ？改善の第一歩はここから</title>
+  <meta name="description" content="1〜5歳の子どもの偏食タイプを15問で診断。タイプ別の原因・対応・レシピまで一貫してご提案。忙しいママでも今日からできる偏食改善のヒントが見つかります。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== TOP PAGE ===== -->
+<div id="page-top" class="page active">
+  <div class="top-bg">
+    <div class="top-hero">
+      <div class="hero-badge">🍽️ 偏食改善 無料診断</div>
+      <h1 class="hero-title">
+        うちの子、<br>
+        <span class="highlight">なんで食べないの？</span><br>
+        <span class="sub-title">15問で「偏食タイプ」がわかる！</span>
+      </h1>
+      <p class="hero-sub">
+        無理やり食べさせなくていい。<br>
+        怒らなくていい。<br>
+        <strong>タイプを知るだけで、対応がガラッと変わります。</strong>
+      </p>
+
+      <div class="hero-features">
+        <div class="feature-pill">⏱ 3分で完了</div>
+        <div class="feature-pill">✅ 選択式で簡単</div>
+        <div class="feature-pill">🎯 原因まで判明</div>
+      </div>
+
+      <button class="btn-start" id="btn-start" onclick="startDiagnosis()">
+        診断スタート！
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <p class="hero-note">※ 1〜5歳のお子さんを持つ保護者向けです</p>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </div>
+
+  <div class="top-types">
+    <h2 class="section-title">5つの偏食タイプ</h2>
+    <p class="section-sub">あなたのお子さんはどのタイプ？</p>
+    <div class="types-grid">
+      <div class="type-card"><span class="type-emoji">🫣</span><span class="type-name">食感NGタイプ</span></div>
+      <div class="type-card"><span class="type-emoji">👀</span><span class="type-name">見た目NGタイプ</span></div>
+      <div class="type-card"><span class="type-emoji">👅</span><span class="type-name">味覚敏感タイプ</span></div>
+      <div class="type-card"><span class="type-emoji">🍞</span><span class="type-name">炭水化物偏食タイプ</span></div>
+      <div class="type-card"><span class="type-emoji">🥦</span><span class="type-name">野菜・タンパク質<br>拒否タイプ</span></div>
+    </div>
+  </div>
+
+  <div class="top-voice">
+    <h2 class="section-title">こんなお悩みありませんか？</h2>
+    <div class="voices">
+      <div class="voice-card">
+        <div class="voice-icon">😩</div>
+        <p>「毎日同じものしか食べてくれない…」</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-icon">😰</div>
+        <p>「野菜を出しただけで大泣きする」</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-icon">😤</div>
+        <p>「食事のたびにイヤイヤ&amp;癇癪で疲れ果てた」</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-icon">🤔</div>
+        <p>「何が原因なのか、何をすればいいのかわからない」</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-cta">
+    <p class="cta-lead">原因を知れば、<strong>今日から変わる。</strong></p>
+    <button class="btn-start btn-start-2" onclick="startDiagnosis()">
+      無料で診断してみる →
+    </button>
+  </div>
+
+  <footer class="top-footer">
+    <p>© 2024 偏食タイプ診断 | 幼児栄養士監修</p>
+  </footer>
+</div>
+
+<!-- ===== QUIZ PAGE ===== -->
+<div id="page-quiz" class="page">
+  <div class="quiz-header">
+    <button class="btn-back" onclick="goBack()">← 戻る</button>
+    <div class="quiz-progress-wrap">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="quiz-progress-text" id="progress-text">1 / 15</div>
+    </div>
+  </div>
+
+  <div class="quiz-container">
+    <div class="quiz-number" id="quiz-number">Q1</div>
+    <div class="quiz-question" id="quiz-question"></div>
+    <div class="quiz-options" id="quiz-options"></div>
+  </div>
+</div>
+
+<!-- ===== LOADING PAGE ===== -->
+<div id="page-loading" class="page">
+  <div class="loading-container">
+    <div class="loading-icon">🔍</div>
+    <div class="loading-title">診断中...</div>
+    <div class="loading-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="loading-sub">お子さんのタイプを分析しています</p>
+  </div>
+</div>
+
+<!-- ===== RESULT PAGE ===== -->
+<div id="page-result" class="page">
+  <div class="result-container" id="result-container">
+    <!-- JS で動的生成 -->
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
