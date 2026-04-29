@@ -168,8 +168,22 @@ function showResult() {
             <div class="paid-cta-icon">🎁</div>
             <h3 class="paid-cta-title">もっと詳しく知りたい方へ<br>「最短1日で、野菜を一口。<br>ママとハイタッチする食卓へ」</h3>
             <p class="paid-cta-desc">最短1日で“野菜を一口”に変わる具体ステップと、<br>つまずき別の対処・再現できる内容をまとめた完全版。<br><br>今なら人数限定で、状況に合わせて一緒に進める<br>個別サポート付き。</p>
+            
+            <div class="recipe-tool-box">
+                <h4 class="recipe-tool-title">＼ 偏食改善を加速させる ／<br>魔法のレシピツール付き</h4>
+                <ul class="recipe-tool-list">
+                    <li><span>🎯</span> 偏食タイプ別レシピで迷わない</li>
+                    <li><span>📅</span> 献立自動生成で考える手間ゼロ</li>
+                    <li><span>🛒</span> 買い物リストが自動で完成</li>
+                    <li><span>👦</span> 兄弟バラバラでもOKな対応術</li>
+                    <li><span>⏳</span> 忙しいママの味方！時短・包丁なし・レンチン・作り置きレシピ</li>
+                    <li><span>🔥</span> 全195レシピ・今後も続々追加予定</li>
+                </ul>
+                <p class="recipe-tool-note">※買い切りタイプなので、今が一番お得に手に入ります</p>
+            </div>
+
             <div class="paid-cta-warn">※ 本気でお子さんの偏食に向き合いたいママ専用です</div>
-            <a href="https://note.com/monmon_kahchan/n/ndb1cc10660fa?sub_rt=share_sb" class="btn-paid" target="_blank">詳しく見てみる</a>
+            <a href="https://note.com/monmon_kahchan/n/na29e95616bc3?sub_rt=share_sb" class="btn-paid" target="_blank">今すぐ内容を確認する →</a>
         </div>
 
         <div class="share-box">
